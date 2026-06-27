@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Hub — Premium Campus Infrastructure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cyber Grid Background Overlay Layer -->
+  <div class="grid-overlay"></div>
+
+  <!-- Sleek Sticky Header (Image 1) -->
+  <header class="navbar">
+    <div class="logo-area">
+      <div class="logo-icon">sh</div>
+      <span class="logo-text">Student Hub</span>
+    </div>
+    <div class="nav-actions">
+      <button class="lang-selector-btn" onclick="toggleLanguage()">
+        <span class="globe-icon">🌐</span> <span id="lang-text">EN</span> <span class="arrow-down">⋁</span>
+      </button>
+      <button class="hamburger-menu-btn">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Hero Section (Image 1) -->
+  <section class="hero-container">
+    <div class="pill-badge">
+      <span class="pulse-dot"></span> <span id="badge-text">FUTURE CAMPUS INFRASTRUCTURE</span>
+    </div>
+    <h1 id="hero-title">Trading Digital <br><span class="cyan-gradient-text">Campus Assets.</span></h1>
+    <p id="hero-desc">Student Hub designs and engineers local marketplace systems, scalable physical engineering models, and creative canvas artwork ecosystems to simplify academic work.</p>
+    
+    <div class="hero-action-row">
+      <button class="btn-primary" onclick="scrollToSection('forms-view')">Explore Marketplace →</button>
+      <button class="btn-secondary" onclick="openChat()">Join the Community</button>
+    </div>
+  </section>
+
+  <!-- Running Infinite Marquee Divider (Image 2) -->
+  <div class="infinite-marquee">
+    <div class="marquee-track">
+      <span>CAMPUS PROCUREMENT ⚡ HANDMADE CANVAS PAINTINGS ✦ ENGINEERING MODELS ✦ PEER-TO-PEER ASSETS ⚡ CAMPUS PROCUREMENT ⚡ HANDMADE CANVAS PAINTINGS ✦ ENGINEERING MODELS ✦ PEER-TO-PEER ASSETS ⚡</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Integration Section (Image 2 & 5 Style for Forms) -->
+  <section id="forms-view" class="dashboard-section">
+    <h2 class="section-heading">Integrated Direct Portals</h2>
+    <p class="section-subheading">Submit your entries directly into our marketplace pipeline without ever leaving Student Hub.</p>
+    
+    <div class="dashboard-grid">
+      <!-- Request Card Button Trigger -->
+      <div class="dash-card card-glow" onclick="showForm('request')">
+        <div class="card-header">
+          <div class="card-icon blue-tint">📥</div>
+          <span class="card-tag status-active">Live Pipeline</span>
+        </div>
+        <h3>Request Project Assets</h3>
+        <p>Commission custom scale models, layout wireframes, or handmade artwork designed precisely to specifications.</p>
+        <span class="card-action-link">Open Portal Setup ↗</span>
+      </div>
+
+      <!-- Sell Card Button Trigger -->
+      <div class="dash-card card-glow" onclick="showForm('sell')">
+        <div class="card-header">
+          <div class="card-icon green-tint">📤</div>
+          <span class="card-tag status-active">Secure Portal</span>
+        </div>
+        <h3>Liquidate Built Models</h3>
+        <p>Offload your previous semester's engineering projects, architecture charts, or extra canvas prints directly onto peers.</p>
+        <span class="card-action-link">Open Portal Setup ↗</span>
+      </div>
+    </div>
+
+    <!-- Hidden Seamless Form Embed Frame Containers -->
+    <div id="form-display-container" class="form-panel-hide">
+      <button class="close-form-btn" onclick="closeForm()">× Close Portal View</button>
+      <div class="iframe-wrapper">
+        <!-- Google Forms get dynamically generated here inside your custom themed wrapper -->
+        <iframe id="target-google-form" src="" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading portal...</iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 25-Second Hidden Dynamic Card Container Area -->
+  <div id="timed-offer-container" class="hidden-popup-card">
+    <div class="popup-inner">
+      <span class="close-popup" onclick="dismissPopup()">×</span>
+      <span class="popup-badge">🔥 LIMITED METRIC OFFER</span>
+      <h3>Claim Bonus Custom Sketches</h3>
+      <p>Our analytics notice you are browsing assets. Finalize a portfolio painting acquisition within the next hour for zero shipping premiums.</p>
+      <a href="#forms-view" class="popup-btn" onclick="dismissPopup()">Claim Premium Entry</a>
+    </div>
+  </div>
+
+  <!-- Neon-Cyan Interactive AI Prompt Box (Image 4) -->
+  <section class="ai-interaction-section">
+    <div class="gradient-ai-box">
+      <div class="ai-logo-sphere">sh</div>
+      <h3 id="ai-title">Any other doubts? Ask Student Hub AI</h3>
+      <p id="ai-desc">Get instantaneous, algorithmic feedback regarding available assets in your regional language selection.</p>
+      <div class="ai-search-capsule">
+        <input type="text" id="ai-user-query" placeholder="Type your framework question here...">
+        <button class="ai-submit-btn" onclick="openChat()">Ask</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Minimal Accordion FAQ Blocks (Image 3) -->
+  <section class="faq-container-block">
+    <h2 class="faq-main-title">Frequently Asked Questions</h2>
+    <p class="faq-main-subtitle">Everything you need to decipher regarding Student Hub networks.</p>
+
+    <div class="faq-wrapper">
+      <div class="accordion-row" onclick="handleFaqToggle(this)">
+        <div class="accordion-trigger">
+          <span class="faq-q-text">What exactly is Student Hub ecosystem?</span>
+          <span class="accordion-indicator">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Student Hub is an automated peer-to-peer campus logistical layer enabling frictionless exchange of engineering structures, physical code models, and artisan canvas prints.</p>
+        </div>
+      </div>
+
+      <div class="accordion-row" onclick="handleFaqToggle(this)">
+        <div class="accordion-trigger">
+          <span class="faq-q-text">Is the asset transaction platform free to access?</span>
+          <span class="accordion-indicator">+</span>
+        </div>
+        <div class="accordion-content">
+          <p>Yes. Listing infrastructure data sets and joining our core hub community pipeline is 100% free of membership premiums.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Glowing Corner Avatar Assistant Button (Image 1 Component) -->
+  <div class="floating-cyber-avatar" onclick="openChat()">
+    <div class="avatar-core">sh</div>
+    <span class="online-indicator-ping"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
