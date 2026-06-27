@@ -1,0 +1,88 @@
+// 1. Language Toggle Database Configuration System
+let currentLanguageMode = 'EN';
+const pageDatabase = {
+  EN: {
+    badge: "FUTURE CAMPUS INFRASTRUCTURE",
+    title: "Trading Digital <br><span class='cyan-gradient-text'>Campus Assets.</span>",
+    desc: "Student Hub designs and engineers local marketplace systems, scalable physical engineering models, and creative canvas artwork ecosystems to simplify academic work.",
+    aiTitle: "Any other doubts? Ask Student Hub AI",
+    aiDesc: "Get instantaneous, algorithmic feedback regarding available assets in your regional language selection."
+  },
+  HI: {
+    badge: "भविष्य का कैंपस इंफ्रास्ट्रक्चर",
+    title: "डिजिटल कैंपस संपत्तियों <br><span class='cyan-gradient-text'>का व्यापार करें।</span>",
+    desc: "स्टूडेंट हब अकादमिक कार्यों को सरल बनाने के लिए स्थानीय मार्केटप्लेस सिस्टम, स्केलेबल भौतिक इंजीनियरिंग मॉडल और रचनात्मक कैनवास आर्टवर्क डिज़ाइन करता है।",
+    aiTitle: "कोई अन्य शंका? स्टूडेंट हब एआई से पूछें",
+    aiDesc: "अपनी चुनी हुई क्षेत्रीय भाषा में उपलब्ध संपत्तियों के बारे में तुरंत प्रतिक्रिया प्राप्त करें।"
+  }
+};
+
+function toggleLanguage() {
+  currentLanguageMode = currentLanguageMode === 'EN' ? 'HI' : 'EN';
+  document.getElementById('lang-text').innerText = currentLanguageMode;
+  
+  // Apply changes to UI components instantly
+  document.getElementById('badge-text').innerText = pageDatabase[currentLanguageMode].badge;
+  document.getElementById('hero-title').innerHTML = pageDatabase[currentLanguageMode].title;
+  document.getElementById('hero-desc').innerText = pageDatabase[currentLanguageMode].desc;
+  document.getElementById('ai-title').innerText = pageDatabase[currentLanguageMode].aiTitle;
+  document.getElementById('ai-desc').innerText = pageDatabase[currentLanguageMode].aiDesc;
+}
+
+// 2. Interactive Google Forms Embed Control Gateways
+function showForm(portalType) {
+  const portalDisplay = document.getElementById('form-display-container');
+  const iframeTarget = document.getElementById('target-google-form');
+  
+  // Paste your personal secure Google Form URLs inside these parameters:
+  if (portalType === 'request') {
+    iframeTarget.src = "YOUR_GOOGLE_REQUEST_FORM_EMBED_URL_HERE";
+  } else if (portalType === 'sell') {
+    iframeTarget.src = "YOUR_GOOGLE_SELL_FORM_EMBED_URL_HERE";
+  }
+  
+  // Smooth reveal transition parameters execution
+  portalDisplay.className = "form-panel-show";
+  scrollToSection('form-display-container');
+}
+
+function closeForm() {
+  document.getElementById('form-display-container').className = "form-panel-hide";
+  document.getElementById('target-google-form').src = ""; // Flush background cache frames
+}
+
+// 3. Automated 25-Second Delayed Structural Popup Engine
+setTimeout(function() {
+  const popupElement = document.getElementById('timed-offer-container');
+  if(popupElement) {
+    popupElement.classList.add('show-popup');
+  }
+}, 25000); // 25000ms = Exactly 25 seconds execution lag time
+
+function dismissPopup() {
+  document.getElementById('timed-offer-container').classList.remove('show-popup');
+}
+
+// 4. Accordion Component Operational Logic Engine
+function handleFaqToggle(clickedElement) {
+  const contentArea = clickedElement.querySelector('.accordion-content');
+  const dynamicIndicator = clickedElement.querySelector('.accordion-indicator');
+  
+  if (contentArea.style.display === "block") {
+    contentArea.style.display = "none";
+    dynamicIndicator.innerText = "+";
+  } else {
+    contentArea.style.display = "block";
+    dynamicIndicator.innerText = "−";
+  }
+}
+
+// Helpers
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+function openChat() {
+  // Plug your clean Chatbase Help Page URL right inside here:
+  window.open("YOUR_CHATBASE_PUBLIC_DEPLOY_URL_HERE", "_blank");
+}
